@@ -1,0 +1,12 @@
+# Engineering
+type vendor_persist_engineer_file, file_type;
+
+# Charger
+type sysfs_battery, sysfs_type, fs_type;
+
+# System Suspend
+type vendor_sysfs_usb_supply, fs_type, sysfs_type;
+
+# Opluscamera
+type opluscamera_app, file_type;
+type opluscamera_app_data_file, file_type, data_file_type, core_data_file_type, app_data_file_type;

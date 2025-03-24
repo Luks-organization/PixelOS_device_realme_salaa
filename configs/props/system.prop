@@ -1,0 +1,190 @@
+# AEE
+ro.vendor.have_aee_feature=1
+
+# Audio
+ro.audio.silent=0
+ro.audio.usb.period_us=16000
+ro.camera.sound.forced=0
+ro.config.vc_call_vol_steps=10
+
+# Brand
+Build.BRAND=MTK
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Display
+debug.sf.disable_backpressure=1
+ro.opengles.version=196610
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
+# Perf
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.mtk_perf_simple_start_win=1
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.vendor.mtk_flv_playback_support=1
+vendor.mtk_thumbnail_optimization=true
+
+# Camera
+persist.camera.HAL3.enabled=1
+persist.camera.eis.enable=1
+persist.vendor.camera.privapp.list=com.android.camera,com.google.camera,org.lineageos.aperture,org.lineageos.aperture.dev
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,com.discord,us.zoom.videomeetings
+vendor.camera.aux.packagelist=com.android.camera,com.google.camera,net.sourceforge.opencamera,org.lineageos.aperture
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# USB
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+
+# ADB
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+# Storage
+persist.sys.fuse.passthrough.enable=true
+
+# IPO
+sys.ipo.disable=1
+sys.ipo.pwrdncap=2
+
+# iorapd
+ro.iorapd.enable=false
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+
+# Memory
+ro.config.per_app_memcg=false
+
+# Misc
+persist.vendor.mdlog.flush_log_ratio=72340194296137244
+persist.vendor.pms_removable=1
+persist.vendor.vzw_device_type=0
+qemu.hw.mainkeys=0
+ro.mediatek.version.branch=alps-mp-s0.mssi1.tc16sp-pr6
+ro.support_one_handed_mode=true
+ro.vendor.mtk_cta_set=1
+ro.vendor.mtk_gwsd_support=1
+ro.vendor.mtk_omacp_support=1
+
+# WiFi
+mediatek.wlan.ctia=0
+persist.vendor.wfc.sys_wfc_support=1
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+
+# RIL
+ro.telephony.sim.count=2
+ro.vendor.mtk_telephony_add_on_policy=0
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
+
+# Zygote
+ro.zygote.preload.enable=0
+zygote.critical_window.minute=10
+persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Memory management
+persist.sys.fw.bg_apps_limit?=48
+persist.sys.fw.use_trim_settings?=true
+persist.sys.fw.empty_app_percent?=50
+persist.sys.fw.trim_empty_percent?=100
+persist.sys.fw.trim_cache_percent?=100
+persist.sys.fw.trim_enable_memory?=2147483648
+persist.sys.fw.bservice_age?=120000
+persist.sys.fw.bservice_limit?=6
+persist.sys.fw.bservice_enable?=true
+
+# Power Saving Mode
+ro.mtk_pq.ctrld_dpi_support=1
+ro.power_profile.override=power-save
+ 
+# CPU Governor for Battery Saving
+ro.config.cpufreq_iops_boost_freq=960000
+ro.config.cpufreq_iops_min_freq=400000
+ 
+# Memory Optimization
+ro.mtk_aee_mode=Dis
+ro.mtk_cam.aal_function=1
+ro.mtk_perfservice_support=1
+ro.config.sd_cache=1
+ro.config.dha_cached_min=16
+ro.config.dha_cached_max=32
+ 
+# Display Refresh Rate
+persist.sys.display-rate=90
+ 
+# Camera Performance
+ro.mtk_cam.mfb.ultimate=1
+ 
+# Display Settings
+ro.min_pointer_dur=8
+ro.hwui.disable_sc=false
+ 
+# Display Enhancements
+ro.mtk_display_ovl_support=1
+ 
+# Network Optimization
+ro.mtk_data_speed_label=true
+ro.mtk_network_management=1
+persist.radio.smart_ap=1
+persist.radio.apm_sim_not_pwdn=1
+ 
+# Network Performance
+ro.config.hw_fast_dormancy=1
+ro.config.hw_ram=true
+ro.config.hw_fold=true
+ro.config.hw_ram=true
+ 
+# Thermal Management
+ro.mtk_thermal_monitor.enabled=true
+persist.thermal_config.mitigation=1
+ 
+# Thermal Configuration
+ro.config.thermal_limit=75
+ro.config.thermal_dcs=40
+ 
+# GPU Rendering
+ro.sf.lcd_density=380
+debug.hwui.renderer=skiagl
+debug.hwui.render_dirty_regions=false
+ 
+# GPU Performance Optimization
+debug.sf.hw=1
+ro.mtk_perf_dds_cpu=1
+ 
+# GPU Optimization
+ro.mtk_gpu_optimizations=1
+ 
+# Audio Enhancements
+ro.mtk_audio_lossless_support=1
+ 
+# Audio Performance
+ro.mtk_audenh_support=1
+ 
+# Audio Tuning
+ro.config.hd_voicemail=1
+persist.sys.audio.out.vol=7
+ 
+# Battery Optimization
+ro.config.max.starting_bg=4
+ro.sys.fw.bg_apps_limit=4
+pm.sleep_mode=1

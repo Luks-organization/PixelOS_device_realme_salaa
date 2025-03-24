@@ -1,0 +1,89 @@
+# Camera
+/data/vendor/camera_update(/.*)?                                                                                       u:object_r:vendor_camera_update_data_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                                                       u:object_r:persist_camera_file:s0
+/(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.engcamera@1\.0-service                                               u:object_r:mtk_hal_camera_exec:s0
+/(vendor|odm)/lib(64)?/android\.hardware\.graphics\.allocator@2\.0\.so                                                 u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/android\.hardware\.graphics\.allocator@3\.0\.so                                                 u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/android\.hardware\.graphics\.allocator@4\.0\.so                                                 u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/android\.hardware\.graphics\.common-V2-ndk_platform\.so                                         u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/android\.hardware\.graphics\.common-V2-ndk\.so                                                  u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/vendor\.oplus\.hardware\.ormsHalService-V1-ndk_platform\.so                                     u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/mt6785/libneuron_runtime\.5\.so                                                                 u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libormshalclient\.so                                                                            u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/vendor\.oplus\.hardware\.orms@1\.0\.so                                                          u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_hdr_denoise_api\.so                                                                  u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_low_light_hdr\.so                                                                    u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_hdrplus_hvx_stub\.so                                                                 u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_hdr_couple_api\.so                                                                   u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_hdr_couple_api_v4\.so                                                                u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_low_light_hdr_for_neon\.so                                                           u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_merge_hdr_denoise_api\.so                                                            u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libVDBayerHDR\.so                                                                               u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libVDBlurless\.so                                                                               u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_hdr_denoise_api_v4\.so                                                               u:object_r:same_process_hal_file:s0
+/(vendor|odm)/lib(64)?/libarcsoft_turbo_hdr_raw\.so                                                                    u:object_r:same_process_hal_file:s0
+
+# Charging
+/dev/oplus_chg                                                                                                         u:object_r:oplus_charger_device:s0
+/sys/class/oplus_chg/battery/voocchg_ing                                                                               u:object_r:vendor_sysfs_battery_supply:s0
+/(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.charger@1\.0-service                                                 u:object_r:hal_charger_oplus_exec:s0
+
+# Display
+/dev/oplus_display                                                                                                     u:object_r:oplus_display_device:s0
+/sys/devices/platform/leds-mt65xx/leds/lcd-backlight(/.*)?                                                             u:object_r:sysfs_leds:s0
+
+# Latency
+/dev/cpu_dma_latency                                                                                                   u:object_r:latency_device:s0
+
+# Sensors
+/(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.oplusSensor@1\.0-service                                             u:object_r:hal_sensors_default_exec:s0
+/dev/m_virtual_sensor_misc                                                                                             u:object_r:virtual_sensor_device:s0
+/dev/block/sdc4                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/platform/11270000.ufshci/by-name/reserve.*                                                                  u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/reserve.*                                                                       u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplusreserve.*                                                         u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplusreserve.*                                                                  u:object_r:oplus_block_device:s0
+/dev/block/by-name/cdt_engineering(_[ab])?                                                                             u:object_r:oplus_block_device:s0
+/dev/block/sdc7                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/sdc16                                                                                                       u:object_r:oplus_block_device:s0
+/dev/block/sdb3                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/sdc3                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplus_custom                                                           u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplus_custom                                                                    u:object_r:oplus_block_device:s0
+/mnt/vendor/persist/engineermode(/.*)?                                                                                 u:object_r:persist_engineer_file:s0
+/storage/persist/engineermode(/.*)?                                                                                    u:object_r:persist_engineer_file:s0
+
+# Fingerprint
+/dev/jiiov_fp                                                                                                          u:object_r:fingerprint_device:s0
+/data/vendor/FactoryTestReport(/.*)?                                                                                   u:object_r:factorytestreport_vendor_data_file:s0
+/data/vendor/fingerprint(/.*)?                                                                                         u:object_r:oplus_fingerprint_file:s0
+/data/vendor/optical_fingerprint(/.*)?                                                                                 u:object_r:oplus_fingerprint_file:s0
+/mnt/vendor/persist/fingerprint(/.*)?                                                                                  u:object_r:oplus_fingerprint_file:s0
+/mnt/vendor/persist/cali_data\.so                                                                                      u:object_r:oplus_fingerprint_file:s0
+/mnt/vendor/persist/fingerprint/jiiov(/.*)?	                                                                       u:object_r:factorytestreport_vendor_data_file:s0
+/(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service                                 u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oplus                          u:object_r:hal_fingerprint_default_exec:s0
+
+# Firmwares
+/odm/vendor/firmware(/.*)?                                                                                             u:object_r:vendor_firmware_file:s0
+/odm/firmware(/.*)?                                                                                                    u:object_r:vendor_firmware_file:s0
+
+# NFC
+/dev/pn553                                                                                                             u:object_r:nfc_device:s0
+/(vendor|system/vendor)/bin/nfc_detect\.sh                                                                             u:object_r:nfc_detect_exec:s0
+
+# Vibrator
+/vendor/bin/hw/android\.hardware\.vibrator-service\.mediatek                                                           u:object_r:hal_vibrator_default_exec:s0
+
+# Perfmgr
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                                      u:object_r:hal_power_default_exec:s0
+
+# Data files
+/data/vendor/dolby(/.*)?                                                                                               u:object_r:vendor_data_file:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                               u:object_r:hal_dms_default_exec:s0
+
+# ORMS Hal
+/(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.orms\.ormsHalService@1\.0-service                                        u:object_r:oplus_hal_ormsHal_exec:s0
+/(vendor|odm|vendor/odm)/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service                                      u:object_r:oplus_orms_aidl_service_exec:s0

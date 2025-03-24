@@ -1,0 +1,5 @@
+allow em_app content_capture_service:service_manager find;
+allow em_app netstats_service:service_manager find;
+allow em_app sensitive_content_protection_service:service_manager find;
+allow em_app voiceinteraction_service:service_manager find;
+allow em_app zygote:unix_stream_socket getopt;

@@ -1,0 +1,203 @@
+//
+// SPDX-FileCopyrightText: PixelOS
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "factory_init.connectivity.common.rc",
+    src: "etc/factory_init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.connectivity.rc",
+    src: "etc/factory_init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.project.rc",
+    src: "etc/factory_init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "factory_init.rc",
+    src: "etc/factory_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.ago.rc",
+    src: "etc/init.ago.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.power.rc",
+    src: "etc/init.mt6785.power.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "etc/init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "etc/init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "etc/init.modem.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.rc",
+    src: "etc/init.mt6785.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mt6785.usb.rc",
+    src: "etc/init.mt6785.usb.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.nfc_detect.rc",
+    src: "etc/init.nfc_detect.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "etc/init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.sensor_1_0.rc",
+    src: "etc/init.sensor_1_0.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "etc/init_connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.connectivity.common.rc",
+    src: "etc/meta_init.connectivity.common.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.connectivity.rc",
+    src: "etc/meta_init.connectivity.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.modem.rc",
+    src: "etc/meta_init.modem.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.project.rc",
+    src: "etc/meta_init.project.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "meta_init.rc",
+    src: "etc/meta_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "multi_init.rc",
+    src: "etc/multi_init.rc",
+    vendor: true,
+    relative_install_path: "init/hw",
+}
+
+prebuilt_etc {
+    name: "fstab.mt6785",
+    src: "etc/fstab.mt6785",
+    vendor: true,
+    required: ["fstab.mt6785_ramdisk"],
+}
+
+prebuilt_etc {
+    name: "fstab.mt6785_ramdisk",
+    src: "etc/fstab.mt6785",
+    filename_from_src: true,
+    ramdisk: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.oplus.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.oplus.rc",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.mtk.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.mtk.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.oplus.rc",
+    src: "etc/init.oplus.rc",
+    system_ext_specific: true,
+    relative_install_path: "init",
+}
+
+sh_binary {
+    name: "init.oplus.sh",
+    src: "bin/init.oplus.sh",
+}
+
+sh_binary {
+    name: "perf_profile.sh",
+    src: "bin/perf_profile.sh",
+}
+
+sh_binary {
+    name: "nfc_detect.sh",
+    src: "bin/nfc_detect.sh",
+    vendor: true,
+}

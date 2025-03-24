@@ -1,0 +1,25 @@
+# Audio
+system_public_prop(system_oplus_audio_prop)
+
+# Camera
+system_restricted_prop(system_oplus_camera_prop)
+
+# Radio
+system_public_prop(system_oplus_radio_prop)
+
+# Fingerprint
+system_public_prop(system_fingerprint_prop)
+
+# Version
+system_vendor_config_prop(system_oplus_project_prop)
+
+# Realme Parts
+system_public_prop(vib_strength_prop)
+system_public_prop(cabc_prop)
+
+# Perf Profile
+system_public_prop(perf_prop)
+system_public_prop(property_service)
+
+# DT2W
+system_public_prop(dt2w_prop)

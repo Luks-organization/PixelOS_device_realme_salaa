@@ -1,0 +1,1 @@
+allow gmscore_app vendor_oplus_prop:file { getattr open read map };

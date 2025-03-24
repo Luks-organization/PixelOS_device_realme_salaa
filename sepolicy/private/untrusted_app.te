@@ -1,0 +1,5 @@
+allow untrusted_app unlabeled:filesystem { getattr };
+allow untrusted_app media_rw_data_file:file { relabelfrom relabelto };
+allow untrusted_app sysfs:dir { read };
+allow untrusted_app sysfs_batteryinfo:dir { search };
+allow untrusted_app userdebug_or_eng_prop:file { read };

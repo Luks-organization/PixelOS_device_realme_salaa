@@ -1,0 +1,1 @@
+allow system_server binderfs_logs_transactions:file { open read };

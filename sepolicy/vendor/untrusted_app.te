@@ -1,0 +1,12 @@
+allow untrusted_app proc_bus_input:file { read open getattr };
+allow untrusted_app proc_gpufreq:dir { search };
+allow untrusted_app sysfs_gpu:dir { search };
+allow untrusted_app vendor_mtk_soc_prop:file { open read };
+allow untrusted_app vendor_oplus_prop:file { open read };
+allow untrusted_app zygote:unix_stream_socket getopt;
+
+get_prop(untrusted_app, camera_prop)
+set_prop(untrusted_app, camera_prop)
+
+get_prop(untrusted_app, vendor_camera_prop)
+set_prop(untrusted_app, vendor_camera_prop)

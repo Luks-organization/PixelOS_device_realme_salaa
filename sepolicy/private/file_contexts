@@ -1,0 +1,5 @@
+# vtservice
+/system_ext/bin/vtservice             u:object_r:vtservice_exec:s0
+
+# Realme Parts
+/system/bin/perf_profile\.sh          u:object_r:perf_profile_exec:s0

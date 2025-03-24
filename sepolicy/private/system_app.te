@@ -1,0 +1,17 @@
+# Allow system_app to set dt2w prop
+set_prop(system_app, dt2w_prop)
+
+# Allow system_app to set cabc prop
+set_prop(system_app, cabc_prop)
+
+# Allow system app to set perf prop
+set_prop(system_app, perf_prop)
+set_prop(system_app, property_service)
+
+# Allow system app to set vibration prop
+set_prop(system_app, vib_strength_prop)
+
+allow system_app tracingproxy_service:service_manager find;
+allow system_app default_android_service:service_manager find;
+allow system_app system_suspend_control_internal_service:service_manager find;
+allow system_app system_suspend_control_service:service_manager find;

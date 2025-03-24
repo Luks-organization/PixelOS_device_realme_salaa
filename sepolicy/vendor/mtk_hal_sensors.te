@@ -1,0 +1,5 @@
+allow mtk_hal_sensors vendor_proc_oplus_sensor_feature:dir { search };
+allow mtk_hal_sensors vendor_sysfs_oplus_virtual_sensor:dir { search };
+allow mtk_hal_sensors virtual_sensor_device:chr_file { open read write };
+allow mtk_hal_sensors vendor_proc_oplus_sensor_feature:file { open read write };
+allow mtk_hal_sensors vendor_sysfs_oplus_virtual_sensor:file { open read write };

@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: PixelOS
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+    imports: [
+        "bootable/deprecated-ota",
+        "hardware/oplus",
+    ],
+}
+
+cc_library_shared {
+    name: "libldacBT_bco",
+}

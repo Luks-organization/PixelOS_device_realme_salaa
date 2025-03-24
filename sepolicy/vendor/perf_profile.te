@@ -1,0 +1,40 @@
+type perf_profile, domain, coredomain;
+type perf_profile_exec, system_file_type, system_ext_file_type, vendor_file_type, exec_type, file_type;
+
+init_daemon_domain(perf_profile)
+
+# Allow perf_profile to execute shell commands
+allow perf_profile shell_exec:file { execute map read getattr };
+allow perf_profile self:capability dac_override;
+
+# Allow perf_profile vendor proc display search
+allow perf_profile vendor_proc_display:dir search;
+allow perf_profile vendor_proc_display:file { open write };
+
+# /dev/cpuset
+allow perf_profile cgroup:dir search;
+allow perf_profile cgroup:file rw_file_perms;
+
+# /sys/devices/system/cpu
+allow perf_profile sysfs_devices_system_cpu:dir search;
+allow perf_profile sysfs_devices_system_cpu:file rw_file_perms;
+
+# /sys/module/ged
+allow perf_profile sysfs_ged:dir search;
+allow perf_profile sysfs_ged:file rw_file_perms;
+
+# /proc/cpufreq
+allow perf_profile proc_cpufreq:dir search;
+allow perf_profile proc_cpufreq:file rw_file_perms;
+
+# /proc/gpufreq
+allow perf_profile proc_gpufreq:dir search;
+allow perf_profile proc_gpufreq:file rw_file_perms;
+
+# /proc/ppm
+allow perf_profile proc_ppm:dir search;
+allow perf_profile proc_ppm:file rw_file_perms;
+
+# /proc/touchpanel
+allow perf_profile proc_tp:dir search;
+allow perf_profile proc_tp:file rw_file_perms;
