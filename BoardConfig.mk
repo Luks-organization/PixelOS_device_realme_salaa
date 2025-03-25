@@ -48,10 +48,9 @@ HWUI_COMPILE_FOR_PERF                           := true
 USE_OPENGL_RENDERER                             := true
 
 # Global LTO
-KERNEL_FULL_LLVM                                := true
-GLOBAL_THINLTO                                  := true
-USE_THINLTO_CACHE                               := true
-SKIP_ABI_CHECKS                                 := true
+TARGET_GLOBAL_LTO                               := thin
+TARGET_GLOBAL_OPTIMIZATION                      := O3
+TARGET_GLOBAL_THINLTO                           := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION                   := true
@@ -65,27 +64,6 @@ TARGET_RECOVERY_DEVICE_MODULES                  := libinit_salaa
 TARGET_SYSTEM_PROP                              += $(DEVICE_PATH)/configs/props/system.prop
 TARGET_VENDOR_PROP                              += $(DEVICE_PATH)/configs/props/vendor.prop
 TARGET_PRODUCT_PROP                             += $(DEVICE_PATH)/configs/props/product.prop
-
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH    := /sys/class/oplus_chg/battery/mmi_charging_enable
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS                  := $(DEVICE_PATH)
-
-# RIL
-ENABLE_VENDOR_RIL_SERVICE                       := true
-
-# SPL
-VENDOR_SECURITY_PATCH                           := 2024-04-05
-
-# VNDK
-BOARD_VNDK_VERSION                              := current
-
-# MediaTek IMS
-TARGET_PROVIDES_MEDIATEK_IMS_STACK              := true
-
-# MTK Rules
-TARGET_PROVIDES_MTK_PROPRIETARY                 := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT                    := RGBX_8888
@@ -171,12 +149,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS                  := LLVM=1 LLVM_IAS=1 AS=llvm-as 
 KERNEL_CC                                       := CC=clang
 KERNEL_LD                                       := LD=ld.lld
 
-# ART
-ART_BUILD_TARGET_NDEBUG                         := true
-ART_BUILD_TARGET_DEBUG                          := false
-ART_BUILD_HOST_NDEBUG                           := true
-ART_BUILD_HOST_DEBUG                            := false
-
 # Verified Boot
 BOARD_AVB_ENABLE                                := true
 BOARD_AVB_ALGORITHM                             := SHA256_RSA2048
@@ -218,18 +190,35 @@ WIFI_DRIVER_FW_PATH_P2P                         := "P2P"
 WIFI_DRIVER_STATE_CTRL_PARAM                    := "/dev/wmtWifi"
 WIFI_DRIVER_STATE_ON                            := "1"
 WIFI_DRIVER_STATE_OFF                           := "0"
-WIFI_HAL_INTERFACE_COMBINATIONS                 := {{{STA}, 2}}
-WIFI_HAL_INTERFACE_COMBINATIONS                 += ,{{{AP}, 2},}
-WIFI_HAL_INTERFACE_COMBINATIONS                 += ,{{{STA}, 1}, {{AP}, 1}}
-WIFI_HAL_INTERFACE_COMBINATIONS                 += ,{{{STA}, 1}, {{P2P}, 1}}
-WIFI_HAL_INTERFACE_COMBINATIONS                 += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY   := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Compatibility matrix
 DEVICE_MATRIX_FILE                              := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE                            := $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MANIFEST_SKUS                            += nfc
 DEVICE_MANIFEST_NFC_FILES                       := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
+
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH    := /sys/class/oplus_chg/battery/mmi_charging_enable
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS                  := $(DEVICE_PATH)
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE                       := true
+
+# SPL
+VENDOR_SECURITY_PATCH                           := 2024-04-05
+
+# VNDK
+BOARD_VNDK_VERSION                              := current
+
+# MediaTek IMS
+TARGET_PROVIDES_MEDIATEK_IMS_STACK              := true
+
+# MTK Rules
+TARGET_PROVIDES_MTK_PROPRIETARY                 := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE      += \

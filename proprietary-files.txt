@@ -1,7 +1,7 @@
 # Device proprietary files - from RMX2155_11_F.11, unless pinned
 
 # ADSP
-vendor/lib64/libadsprpc.so;DISABLE_DEPS
+vendor/lib64/libadsprpc.so
 
 # AAL
 vendor/lib/libaal_cust.so
@@ -38,7 +38,7 @@ vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 odm/etc/audio/awinic/AW_DSP.bin
 odm/firmware/awinic_haptic_gun_params.bin
 odm/firmware/awinic_haptic_params.bin
-odm/lib/soundfx/awinic.haptic.effect.so;DISABLE_DEPS
+odm/lib/soundfx/awinic.haptic.effect.so
 odm/lib/soundfx/libhaptic_effect.so
 odm/lib/libawinicsmartpaparse.so
 odm/lib64/libawinicsmartpaparse.so
@@ -54,7 +54,7 @@ vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
 #vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/libMtkSpeechEnh.so
-vendor/lib/lib_bsscore.so;DISABLE_DEPS
+#vendor/lib/lib_bsscore.so;DISABLE_DEPS
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libakm.so
@@ -93,7 +93,7 @@ vendor/lib/libvow_ap_test_hh.so
 vendor/lib/libvow_ap_test_nn.so
 #vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/libMtkSpeechEnh.so
-vendor/lib64/lib_bsscore.so;DISABLE_DEPS
+vendor/lib64/lib_bsscore.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
 vendor/lib64/libaudio_engineer_test.so
@@ -280,7 +280,7 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # CDSP
-vendor/lib64/libcdsprpc.so;DISABLE_DEPS
+vendor/lib64/libcdsprpc.so
 
 # New libs From F11 firmware
 vendor/lib/libminiui.so
@@ -1486,8 +1486,8 @@ odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/hw/fingerprint.goodix_G5.default.so
 odm/lib64/hw/fingerprint.goodix_G6.default.so
 odm/lib64/hw/fingerprint.goodix_G7.default.so
-odm/lib64/hw/fpsensor_fingerprint.default.so;DISABLE_DEPS
-odm/lib64/hw/sidefp_fingerprint.default.so;DISABLE_DEPS
+odm/lib64/hw/fpsensor_fingerprint.default.so
+odm/lib64/hw/sidefp_fingerprint.default.so
 odm/lib64/anc.hal.so
 odm/lib64/libegis_hal.so
 odm/lib64/libgf_hal_G2.so
@@ -1661,7 +1661,7 @@ vendor/firmware/soc1_0_ram_wifi_2a_1_hdr.bin
 
 # GPS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
-vendor/bin/mtk_agpsd;DISABLE_DEPS
+vendor/bin/mtk_agpsd
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_CT.xml
@@ -1960,7 +1960,7 @@ vendor/lib/libimageio_plat_drv.so;DISABLE_DEPS
 vendor/lib/libimageio_plat_pipe.so;DISABLE_DEPS
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
-vendor/lib/libmfllcore.so;DISABLE_DEPS
+#vendor/lib/libmfllcore.so
 vendor/lib/libmmprofile.so
 vendor/lib/libmp4enc_sa.ca7.so;DISABLE_DEPS
 vendor/lib/libmp4enc_xa.ca7.so;DISABLE_DEPS
@@ -2196,9 +2196,9 @@ vendor/lib/libssl-md.so
 vendor/lib/libssl-ss.so
 vendor/lib/libstrongswan.so
 vendor/lib/libsysenv.so
-vendor/lib/libtranslator_mapi_v3.0.so;DISABLE_DEPS
-vendor/lib/libtranslator_mdmi_v2.8.2.so;DISABLE_DEPS
-vendor/lib/libtranslator_utils.so;DISABLE_DEPS
+#vendor/lib/libtranslator_mapi_v3.0.so;DISABLE_DEPS
+#vendor/lib/libtranslator_mdmi_v2.8.2.so;DISABLE_DEPS
+#vendor/lib/libtranslator_utils.so;DISABLE_DEPS
 vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
@@ -2212,7 +2212,7 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libhydra.so
 vendor/lib64/liblpcnr.so
-vendor/lib64/libmfllcore.so;DISABLE_DEPS
+vendor/lib64/libmfllcore.so
 vendor/lib64/libmipc.so
 vendor/lib64/libmmprofile.so
 vendor/lib64/libmnetlink_v104.so
@@ -2247,9 +2247,9 @@ vendor/lib64/libssl-md.so
 vendor/lib64/libssl-ss.so
 vendor/lib64/libstrongswan.so
 vendor/lib64/libsysenv.so
-vendor/lib64/libtranslator_mapi_v3.0.so;DISABLE_DEPS
-vendor/lib64/libtranslator_mdmi_v2.8.2.so;DISABLE_DEPS
-vendor/lib64/libtranslator_utils.so;DISABLE_DEPS
+vendor/lib64/libtranslator_mapi_v3.0.so
+vendor/lib64/libtranslator_mdmi_v2.8.2.so
+vendor/lib64/libtranslator_utils.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
@@ -2362,14 +2362,14 @@ vendor/lib/libMcClient.so
 vendor/lib/libTEECommon.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libgz_uree.so
-vendor/lib/libthha.so;DISABLE_DEPS
+vendor/lib/libthha.so
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 vendor/lib64/libMcClient.so
 vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
-vendor/lib64/libthha.so;DISABLE_DEPS
+vendor/lib64/libthha.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so

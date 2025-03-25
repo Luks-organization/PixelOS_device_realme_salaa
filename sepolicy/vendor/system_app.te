@@ -16,6 +16,10 @@ allow system_app hal_light_default:binder call;
 allow system_app hal_memtrack_default:binder call;
 allow system_app mtk_hal_gnss:binder call;
 allow system_app zygote:unix_stream_socket getopt;
+allow system_app hal_thermal_default:binder call;
+allow system_app hal_vibrator_default:binder call;
+allow system_app hal_wifi_supplicant_default:binder call;
+allow system_app mtk_hal_usb:binder call;
 
 # Allow system_app to read thermals
 r_dir_file(system_app, sysfs_therm)

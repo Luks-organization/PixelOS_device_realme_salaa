@@ -24,12 +24,6 @@
     <!-- The padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">8dp</dimen>
 
-    <!-- the padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">0dp</dimen>
-
-    <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">10dp</dimen>
-
     <!-- The corner radius qs statusbar (usually 28) -->
-    <dimen name="qs_corner_radius">100dp</dimen>
+    <dimen name="qs_corner_radius">54dp</dimen>
 </resources>

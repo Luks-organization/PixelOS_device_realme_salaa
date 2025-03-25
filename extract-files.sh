@@ -129,9 +129,9 @@ function blob_fixup {
             grep -q "liblog.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "liblog.so" "${2}"
             ;;
         vendor/bin/mtk_agpsd)
-            [ "$2" = "" ] && return 0 
-           "$PATCHELF" --replace-needed libcrypto.so libcrypto-v33.so "$2"
-           "$PATCHELF" --replace-needed libssl.so libssl-v33.so "${2}"
+            [ "$2" = "" ] && return 0
+           grep -q "libcrypto-v33.so" "${2}" || "$PATCHELF" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+           grep -q "libssl-v33.so" "${2}" || "$PATCHELF" --replace-needed "libssl.so" "libssl-v33.so" "${2}"
             ;;
         vendor/lib/hw/audio.primary.mt6785.so)
             [ "$2" = "" ] && return 0 
@@ -140,6 +140,20 @@ function blob_fixup {
         vendor/lib*/libnvram.so|vendor/lib*/libsysenv.so|vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron|odm/bin/hw/vendor.oplus.hardware.charger@1.0-service)
             [ "$2" = "" ] && return 0 
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
+        vendor/lib64/libadsprpc.so|vendor/lib64/libcdsprpc.so)
+            [ "$2" = "" ] && return 0 
+            grep -q "libc++.so" "${2}" || "${PATCHELF}" --replace-needed "libstdc++.so" "libc++.so" "${2}"
+            ;;
+        odm/lib/soundfx/awinic.haptic.effect.so|vendor/lib/libthha.so)
+            [ "$2" = "" ] && return 0 
+           "${PATCHELF}" --clear-symbol-version __aeabi_memcpy "${2}"
+           "${PATCHELF}" --clear-symbol-version __aeabi_memset "${2}"
+           "${PATCHELF}" --clear-symbol-version __gnu_Unwind_Find_exidx "${2}"
+            ;;
+        odm/lib64/hw/fpsensor_fingerprint.default.so|odm/lib64/hw/sidefp_fingerprint.default.so)
+            [ "$2" = "" ] && return 0 
+            grep -q "libMcClient.so" "${2}" || "${PATCHELF}" --replace-needed "libTeeClient.so" "libMcClient.so" "${2}"
             ;;
         *)
             return 1

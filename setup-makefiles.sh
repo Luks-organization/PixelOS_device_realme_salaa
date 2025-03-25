@@ -41,7 +41,7 @@ function lib_to_package_fixup_odm_variants() {
             vendor.oplus.hardware.biometrics.fingerprint@2.1)
             echo "$1_odm"
             ;;
-        *)
+            *)
             return 1
             ;;
     esac
@@ -58,19 +58,19 @@ function lib_to_package_fixup_vendor_variants() {
         libremosaic_wrapper | \
         libhwm-oplus | \
 	vendor.mediatek.hardware.videotelephony@1.0)
-            echo "${1}_vendor"
+            echo "$1_vendor"
             ;;
-        *)
+            *)
             return 1
             ;;
     esac
 }
 
 function lib_to_package_fixup() {
-    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
-        lib_to_package_fixup_proto_3_9_1 "$1" ||
-        lib_to_package_fixup_odm_variants "$@" ||
-        lib_to_package_fixup_vendor_variants "$@"
+    lib_to_package_fixup_odm_variants "$@" ||
+    lib_to_package_fixup_vendor_variants "$@" ||
+        lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+        lib_to_package_fixup_proto_3_9_1 "$1"
 }
 
 # Initialize the helper

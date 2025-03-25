@@ -36,11 +36,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # R8 Java optimizations for SystemUI and system_server
 SYSTEM_OPTIMIZE_JAVA := true
 SYSTEMUI_OPTIMIZE_JAVA := true
-RELAX_USES_LIBRARY_CHECK := true
 
 # Dex/ART optimization
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 USE_DEX2OAT_DEBUG := false
 
 # Dex - Apps
