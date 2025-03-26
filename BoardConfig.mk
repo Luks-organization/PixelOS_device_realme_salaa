@@ -6,9 +6,6 @@
 
 DEVICE_PATH                                     := device/realme/salaa
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE                   := true
-
 # Architecture
 TARGET_ARCH                                     := arm64
 TARGET_ARCH_VARIANT                             := armv8-2a-dotprod
@@ -81,9 +78,9 @@ BOARD_DTBOIMG_PARTITION_SIZE                    := 8388608
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE               := ext4
 
 # Partitions (Dynamic)
-BOARD_SUPER_PARTITION_SIZE                      := 8053063680
+BOARD_SUPER_PARTITION_SIZE                      := 9126805504
 BOARD_SUPER_PARTITION_GROUPS                    := main
-BOARD_MAIN_SIZE                                 := 8048869376
+BOARD_MAIN_SIZE                                 := 9122611200 # BOARD_SUPER_PARTITION_SIZE - 4MB
 BOARD_MAIN_PARTITION_LIST                       := system system_ext vendor product odm
 
 # File system
@@ -210,9 +207,6 @@ ENABLE_VENDOR_RIL_SERVICE                       := true
 
 # SPL
 VENDOR_SECURITY_PATCH                           := 2024-04-05
-
-# VNDK
-BOARD_VNDK_VERSION                              := current
 
 # MediaTek IMS
 TARGET_PROVIDES_MEDIATEK_IMS_STACK              := true

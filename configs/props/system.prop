@@ -43,6 +43,7 @@ vendor.camera.aux.packagelist=com.android.camera,com.google.camera,net.sourcefor
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+persist.sys.radio.force_lte_ca=true
 
 # USB
 ro.sys.usb.bicr=no
@@ -169,10 +170,7 @@ debug.hwui.render_dirty_regions=false
  
 # GPU Performance Optimization
 debug.sf.hw=1
-debug.egl.hw=1
 ro.mtk_perf_dds_cpu=1
-debug.composition.type=gpu
-dev.pm.gpu_samplingrate=1
 
 # GPU Optimization
 ro.mtk_gpu_optimizations=1

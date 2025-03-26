@@ -16,7 +16,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
-export PATCHELF_VERSION=0_17_2
+export PATCHELF_VERSION="0_17_2"
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -145,11 +145,11 @@ function blob_fixup {
             [ "$2" = "" ] && return 0 
             grep -q "libc++.so" "${2}" || "${PATCHELF}" --replace-needed "libstdc++.so" "libc++.so" "${2}"
             ;;
-        odm/lib/soundfx/awinic.haptic.effect.so|vendor/lib/libthha.so)
+        odm/lib/soundfx/awinic.haptic.effect.so|vendor/lib*/libthha.so)
             [ "$2" = "" ] && return 0 
-           "${PATCHELF}" --clear-symbol-version __aeabi_memcpy "${2}"
-           "${PATCHELF}" --clear-symbol-version __aeabi_memset "${2}"
-           "${PATCHELF}" --clear-symbol-version __gnu_Unwind_Find_exidx "${2}"
+           "${PATCHELF}" --clear-symbol-version "__aeabi_memcpy" "${2}"
+           "${PATCHELF}" --clear-symbol-version "__aeabi_memset" "${2}"
+           "${PATCHELF}" --clear-symbol-version "__gnu_Unwind_Find_exidx" "${2}"
             ;;
         odm/lib64/hw/fpsensor_fingerprint.default.so|odm/lib64/hw/sidefp_fingerprint.default.so)
             [ "$2" = "" ] && return 0 

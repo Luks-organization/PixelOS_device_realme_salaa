@@ -75,9 +75,6 @@
 # Vibrator
 /vendor/bin/hw/android\.hardware\.vibrator-service\.mediatek                                                           u:object_r:hal_vibrator_default_exec:s0
 
-# Perfmgr
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                                      u:object_r:hal_power_default_exec:s0
-
 # Data files
 /data/vendor/dolby(/.*)?                                                                                               u:object_r:vendor_data_file:s0
 
