@@ -170,7 +170,9 @@ debug.hwui.render_dirty_regions=false
  
 # GPU Performance Optimization
 debug.sf.hw=1
+debug.egl.hw=1
 ro.mtk_perf_dds_cpu=1
+debug.composition.type=gpu
 
 # GPU Optimization
 ro.mtk_gpu_optimizations=1
